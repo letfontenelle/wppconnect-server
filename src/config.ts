@@ -1,9 +1,9 @@
 import { ServerOptions } from './types/ServerOptions';
 
 export default {
-  secretKey: 'THISISMYSECURETOKEN',
-  host: 'http://localhost',
-  port: '21465',
+  secretKey: 'chagas-gabi-bot-secret-2025',
+  host: 'https://wppconnect-server-production-36e9.up.railway.app',
+  port: '8080',
   deviceName: 'WppConnect',
   poweredBy: 'WPPConnect-Server',
   startAllSession: true,
