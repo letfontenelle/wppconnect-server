@@ -15,5 +15,17 @@
  */
 import config from './config';
 import { initServer } from './index';
+import fs from 'fs';
+import path from 'path';
+
+const sessions = ['default', 'gabibot']; // todas as suas sessões
+
+sessions.forEach((session) => {
+  const lock = path.resolve(`./userDataDir/${session}/SingletonLock`);
+  if (fs.existsSync(lock)) {
+    fs.unlinkSync(lock);
+    console.log(`Lock removido da sessão ${session}`);
+  }
+});
 
 initServer(config);
